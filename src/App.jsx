@@ -30,10 +30,11 @@ import Popover from "./components/ui/Popover";
 import Sidebar from "./components/ui/Sidebar";
 import Switch from "./components/ui/Switch";
 import Tooltip from "./components/ui/Tooltip";
-import { Info } from "lucide-react";
+import { Info, User } from "lucide-react";
 import { ToggleGroupItem, ToggleGroupRoot } from "./components/ui/ToggleGroup";
 import { Alert, AlertAction, AlertDescription, AlertTitle } from "./components/ui/Alert";
-
+import { Avatar, AvatarFallback, AvatarGroup, AvatarImage, StatusAvatar } from "./components/ui/Avatar";
+import Navbar from "./components/ui/Navbar";
 
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
   const [value, setValue] = useState("");
   const [enabled, setEnabled] = useState(false);
   const toast = useToast();
+  const [tab, setTab] = useState(0);
   const columns = [
     { label: "Name", accessor: "name" },
     { label: "Email", accessor: "email" },
@@ -128,6 +130,8 @@ export default function App() {
 
   return (
     <>
+
+     <Navbar active={tab} onChange={setTab} />
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -384,12 +388,12 @@ export default function App() {
           </Card>
         </TabsContent>
       </Tabs>
-<Alert>
-  <AlertTitle>Heads up!</AlertTitle>
-  <AlertDescription>
-    This is an informational alert using your custom theme.
-  </AlertDescription>
-</Alert>
+      <Alert>
+        <AlertTitle>Heads up!</AlertTitle>
+        <AlertDescription>
+          This is an informational alert using your custom theme.
+        </AlertDescription>
+      </Alert>
       <Alert variant="success">
         <AlertTitle>Success!</AlertTitle>
         <AlertDescription>
@@ -410,6 +414,22 @@ export default function App() {
           </div>
         </div>
       </Alert>
+      <Avatar>
+  <AvatarImage src="https://example.com/avatar.jpg" />
+  <AvatarFallback delayMs={600}>JD</AvatarFallback>
+</Avatar>
+<div className="flex gap-4 my-2">
+  <StatusAvatar status="online" fallback="ON" /> online
+  <StatusAvatar status="away" fallback="AW" /> away
+  <StatusAvatar status="busy" fallback="BS" /> busy
+  <StatusAvatar status="offline" fallback="OF" /> offline
+</div>
+<AvatarGroup max={3}>
+  <Avatar src="avatar1.jpg" />
+  <Avatar src="avatar2.jpg" />
+  <Avatar src="avatar3.jpg" />
+  <Avatar src="avatar4.jpg" /> 
+</AvatarGroup>
     </>
   )
 }

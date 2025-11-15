@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// context
 const ToggleGroupContext = React.createContext();
 
 export function ToggleGroupRoot({
