@@ -7,7 +7,7 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
     <motion.div
       layout
       className="bg-linear-to-b from-white to-gray-50 rounded-2xl mb-3 shadow-[0_5px_15px_rgba(0,0,0,0.15)] overflow-hidden"
-      transition={{ layout: { duration: 0.4, ease: "easeInOut" } }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       <motion.button
         layout="position"
@@ -27,12 +27,11 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
         {isOpen && (
           <motion.div
             key="content"
-            layout
-            initial={{ height: 0 }}
-            animate={{ height: "auto" }}
-            exit={{ height: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="overflow-hidden"
+            initial={{ opacity: 0, scaleY: 0.8 }}
+            animate={{ opacity: 1, scaleY: 1 }}
+            exit={{ opacity: 0, scaleY: 0.8 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="origin-top"
           >
             <div className="px-5 pb-5 text-gray-600">
               {content}
