@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PricingPlans from "./components/ui/PricingPlans";
-import Accordion from "./components/ui/accordion";
+import Accordion from "./components/ui/Accordion";
 import ButtonArrow from "./components/ui/ButtonArrow";
 import Button from "./components/ui/Button";
 import Drawer from "./components/ui/Drawer";
