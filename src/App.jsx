@@ -27,7 +27,7 @@ import MenuBar from "./components/ui/MenuBar";
 import Form from "./components/ui/FormExample";
 import NativeSelect from "./components/ui/NativeSelect";
 import Popover from "./components/ui/Popover";
-import Sidebar from "./components/ui/SideBar";
+import Sidebar from "./components/ui/Sidebar";
 import Switch from "./components/ui/Switch";
 import Tooltip from "./components/ui/ToolTip";
 import { Info } from "lucide-react";
