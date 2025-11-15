@@ -23,7 +23,7 @@ import CommandPalette from "./components/ui/CommandPalette";
 import DatePicker from "./components/ui/DatePicker";
 import Pagination from "./components/ui/Pagination";
 import DropdownMenu from "./components/ui/DropdownMenu";
-import MenuBar from "./components/ui/Menubar";
+import MenuBar from "./components/ui/MenuBar";
 import Form from "./components/ui/FormExample";
 import NativeSelect from "./components/ui/NativeSelect";
 import Popover from "./components/ui/Popover";
